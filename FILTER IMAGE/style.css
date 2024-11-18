@@ -1,0 +1,99 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Light background */
+      color: #333; /* Dark text for light theme */
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #333;
+      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      background-color: #fff;
+      color: #333;
+      padding: 12px 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 5px 6px 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+      border-color: #bbb;
+    }
+
+    button:active {
+      background-color: #ddd;
+      border-color: #aaa;
+    }
+
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (min-width: 768px) {
+      .button-50 {
+        padding: 12px 50px;
+      }
+    }
+
+    .image-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-item {
+      position: relative;
+      width: 100%;
+      height: 250px; /* Fixed height for all image items */
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-item img {
+      object-fit: cover; /* Ensure the image covers the div */
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .image-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .image-item {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .image-item {
+        flex: 1 1 100%;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 8px 12px;
+      }
+    }
